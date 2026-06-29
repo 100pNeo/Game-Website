@@ -4,49 +4,50 @@ body{
     overflow-x: hidden;
 }
 
+
 body::before{
     content: "";
     position: fixed;
-    left: 20px;
+    left: 0;
     top: 0;
 
-    width: 50px;
+    width: 20px;
     height: 100vh;
 
     background: cyan;
 
     box-shadow:
-    0 0 10px cyan
-    0 0 20px cyan
-    0 0 40px cyan
-    0 0 80px cyan;
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 100px cyan;
 
     z-index: -1;
 }
-
 
 
 body::after{
     content: "";
     position: fixed;
-    right: 20px;
+    right: 0;
     top: 0;
 
-    width: 50px;
+    width: 20px;
     height: 100vh;
 
     background: cyan;
 
     box-shadow:
-    0 0 0px  cyan 
-    0 0 10px cyan
-    0 0 20px cyan
-    0 0 40px cyan
-    0 0 80px cyan
-    0 0 100px cyan;
-     
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 100px cyan;
+
     z-index: -1;
 }
+
  
 .hero{
    min-height: 100vh;
@@ -87,7 +88,7 @@ body::after{
 
 .profile-image {
     width: 100%;
-    max-width: px;
+    max-width: 380px;
     height :auto;
 
     border-radius: 20px;
@@ -139,6 +140,7 @@ body::after{
 
 
 .portfolio-btn {
+  
     font-size: 1.2rem;
     padding: 15px 35px;
     border-radius: 20px;
@@ -187,35 +189,30 @@ body::after{
 
 .unity-section{
     position: relative;
-    padding: 250px 0;
+    padding: 180px 0;
     overflow: hidden;
 }
 
 .unity-section::before{
     content: "";
-
     position: absolute;
 
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
-    width: 2100px;
-    height: 2100px;
-    
+    width: 1600px;
+    height: 1600px;
+
     opacity: 0.20;
-    
+
     background-image: url("Unity logo.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
-    
-
     z-index: 0;
 }
-
 
 .unity-section > *{
     position: relative;
@@ -225,31 +222,27 @@ body::after{
 
 .blender-section{
     position: relative;
-    padding: 380px 0;
+    padding: 180px 0;
     overflow: hidden;
 }
 
 .blender-section::before{
-  content: "";
-
+    content: "";
     position: absolute;
 
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
-    width: 2500px;
-    height: 2500px;
-    
+    width: 1800px;
+    height: 1800px;
+
     opacity: 0.20;
-    
+
     background-image: url("Blender logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-    
 
     z-index: 0;
 }
@@ -259,58 +252,162 @@ body::after{
     z-index: 1;
 }
 
-
 .krita-section{
     position: relative;
-    padding: 280px 0;
+    padding: 180px 0;
     overflow: hidden;
 }
 
 .krita-section::before{
-   content: "";
-
+    content: "";
     position: absolute;
 
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
-    width: 1500px;
-    height: 1500px;
-    
-    opacity: 0.3x0;
-    
+    width: 1200px;
+    height: 1200px;
+
+    opacity: 0.20;
+
     background-image: url("Krita logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
-    
-
     z-index: 0;
 }
 
 .krita-section > *{
-    position:relative;
-    z-index:1;
-}
-
-@keyframes pulseglow{
-    0% , 100%{
-        opacity: 0.5;
-
-    }
-      50%{
-        opacity: 1;
-
-    }
+    position: relative;
+    z-index: 1;
 }
 
 
-    body::before,
-    body::after{
-        animation: pulseglow 2s infinite;
+@media (max-width: 992px){
+
+    .profile-image{
+        max-width: 280px;
     }
 
+    .col-lg-7{
+        text-align: center !important;
+    }
+
+
+
+    .unity-section,
+    .blender-section,
+    .krita-section{
+        padding:120px 0;
+    }
+
+    .unity-section::before{
+        width:900px;
+        height:900px;
+    }
+
+    .blender-section::before{
+        width:1000px;
+        height:1000px;
+    }
+
+    .krita-section::before{
+        width:800px;
+        height:800px;
+    }
+
+    .gameplay-gif,
+    .Mental-cage-image,
+    .Graduation-image,
+    .profile-image{
+        max-width:85%;
+    }
+
+    .game-logo{
+        width:180px;
+    }
+
+    .about-text{
+        font-size:1.4rem;
+    }
+
+    .game-text{
+        font-size:1.1rem;
+    }
+}
+
+
+
+@media (max-width:768px){
+ 
+    .profile-image{
+      max-width: 220px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .about-text{
+        text-align: center;
+    }
+
+    .unity-section,
+    .blender-section,
+    .krita-section{
+        padding:80px 0;
+    }
+
+    .unity-section::before{
+        width:600px;
+        height:600px;
+    }
+
+    .blender-section::before{
+        width:650px;
+        height:650px;
+    }
+
+    .krita-section::before{
+        width:500px;
+        height:500px;
+    }
+
+    .gameplay-gif,
+    .Mental-cage-image,
+    .Graduation-image,
+    .profile-image{
+        max-width:100%;
+    }
+
+    .game-logo{
+        width:120px;
+        top:-15px;
+        left:-10px;
+    }
+
+    .about-text{
+        font-size:1.1rem;
+    }
+
+    .game-text{
+        font-size:1rem;
+    }
+}
+
+
+@keyframes pulseGlow{
+    0%,100%{
+        opacity:0.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+body::before,
+body::after{
+    animation: pulseGlow 2s infinite;
+}
 

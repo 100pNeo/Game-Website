@@ -28,14 +28,16 @@
         </h1>
 
         <!-- Introduction -->
-        <div class="row align-items-center g-5 mt-5">
+        
+<div class="row align-items-center g-5 mt-5">
 
-            <!-- Text -->
-            <div class="col-lg-7 text-start">
+    <!-- Text -->
+    <div class="col-lg-7 text-start">
 
-                <h2 class="mb-4">Game Developer</h2>
+        <h2 class="mb-4">Game Developer</h2>
 
-                <p class="about-text">
+        <p class="about-text">
+            
                     Greetings, I'm <strong>Nehemiah</strong> and I'm a game developer.
                     I am comfortably rounded when it comes to game design,
                     from level design and coding to asset design,
@@ -52,44 +54,47 @@
                     I work with Unity Engine and have experience in both
                     Unity 2D and Unity 3D. I also have experience with
                     Blender, Krita, C#, HTML, CSS, JavaScript and Bootstrap.
-                </p>
+        </p>
 
-                <div class="mt-4">
+    </div>
 
-                    <button class="btn btn-primary btn-lg portfolio-btn me-3"
-                            onclick="showAbout()">
-                        About Me
-                    </button>
+    <!-- Image -->
+    <div class="col-lg-5 text-center">
 
-                    <button class="btn btn-warning btn-lg portfolio-btn me-3"
-                            onclick="ShowCase()">
-                        View Showcase
-                    </button>
-
-                    <button class="btn btn-success btn-lg portfolio-btn"
-                            onclick="showContact()">
-                        Contact Me
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Profile Image -->
-            <div class="col-lg-5 text-center">
-
-                <img src="Profile Image.jpg"
-                     alt="Profile Picture"
-                     class="profile-image">
-
-            </div>
-
-        </div>
+        <img src="Profile Image.jpg"
+             class="profile-image img-fluid"
+             alt="Profile Picture">
 
     </div>
 
 </div>
 
+<!-- Buttons BELOW the row -->
+<div class="text-center mt-5">
+
+    <button class="btn btn-primary portfolio-btn me-3"
+            onclick="showAbout()">
+        About Me
+    </button>
+
+    <button class="btn btn-warning portfolio-btn me-3"
+            onclick="ShowCase()">
+        View Showcase
+    </button>
+
+    <button class="btn btn-success portfolio-btn"
+            onclick="showContact()">
+        Contact Me
+    </button>
+
+</div>
+   
+
+         
+
+    </div>
+
+</div>
 
 
 
@@ -342,6 +347,8 @@
 
     </div>
 
+    </div>
+
     <!-- Description -->
     <div class="col-lg-6">
 
@@ -410,7 +417,7 @@
            </button>  
                 
 
-               <button class="btn btn-success btn-lg portfolio-btn"
+           <button class="btn btn-success btn-lg portfolio-btn"
                onclick="showContact()">
                Contact Me
            </button>  
@@ -422,31 +429,36 @@
 </div>
 
     <!-- CONTACT PAGE -->
-    <div id="contactPage" style="display: none;">
+<div id="contactPage" style="display: none;">
 
-        <div class="container text-center hero">
+    <div class="container hero">
 
-            <h1 class="display-3 fw-bold">
-                Contact Me
-            </h1>
+        <h1 class="display-3 fw-bold text-center">
+            Contact Me
+        </h1>
 
-          
-                <p class="lead mb-0">
-                    Email: nmzileni04@gmail.com
-                    <br><br>
-                    Phone: +27 82 306 4087
-                </p>
-            </div>
+    
 
-                    <button class="btn btn-success btn-lg portfolio-btn"
-                            onclick="showHome()">
-                        Home
-                    </button>
+            <p class="about-text text-center">
+                <strong> Email me at:  nmzileni04@email.com</strong>
+                <br><br>
 
-        </div>
+              <strong> My Cell: +27 82 306 4087 </strong>  
+            </p>
 
+ 
+     <div class="d-flex justify-content-center mt-4"> 
+
+        <button class="btn btn-secondary portfolio-btn mt-4"
+                onclick="showHome()">
+            Back Home
+        </button>
+
+     </div>
+     
     </div>
 
+</div>
     <!-- Your JavaScript -->
     <script src="script.js"></script>
 
